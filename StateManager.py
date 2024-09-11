@@ -31,7 +31,7 @@ def set_session_states():
     if "pill_question" not in st.session_state:
         st.session_state.pill_question = None
 
-@st.cache_data()
+@st.cache_resource()
 def load_model():
     '''
     Tries to load model. If it doesn't exist, runs code to train model. Model is cached.
