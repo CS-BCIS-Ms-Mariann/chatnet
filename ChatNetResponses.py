@@ -17,14 +17,9 @@ def get_bot_response(question):
     :return: best response from model
     '''
     try:
-        print("getting intents")
         intents = sm.get_intents()
-        print("predicting responses")
-        print(st_s.model)
         ints = predict_class(question, st_s.model)
-
         res = get_response(ints, intents)
-        print(res)
     except:
         res = "Waiting for a question"
     return res
