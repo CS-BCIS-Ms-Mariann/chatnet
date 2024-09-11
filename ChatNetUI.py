@@ -44,6 +44,7 @@ if pill_question:
 if st_s.question != None: #runs code below if there is a message from the user
     with st.chat_message(name="Buddy", avatar="🤖"):
         st.write("Hello 👋")
+        st.write("you asked a question" + st_s.question)
         answer = cnr.get_bot_response(st_s.question) #gets response from mode
         st.write(answer) # displays answer
         st_s.question = None
